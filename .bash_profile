@@ -1,8 +1,14 @@
 HOST_NAME=$(git config user.name)
 
 source ~/.nvm/nvm.sh
+source ~/.cargo/env
+source ~/.ghcup/env
+
+source /Users/isaaclefler/.bashrc
+
+
 nvm use stable
-shopt -s autocd
+#shopt -s autocd
 shopt -s histappend
 
 export PATH=$PATH:$HOME/bin
@@ -77,3 +83,4 @@ alias gss='git status -s'
 alias gs='echo ""; echo "*********************************************"; echo -e "   DO NOT FORGET TO PULL BEFORE COMMITTING"; echo "*********************************************"; echo ""; git status'
 alias gst='git stash'
 alias gstp='git stash pop'
+. "$HOME/.cargo/env"
